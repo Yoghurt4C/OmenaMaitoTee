@@ -1,0 +1,39 @@
+
+{
+  "schemaVersion": 1,
+  "id": "omenamaitotee",
+  "version": "${version}",
+
+  "name": "Omena&Maito&Tee!",
+  "description": "Nauti rauhassa teehetkest\u00E4.",
+  "authors": [
+    "Yoghurt4C"
+  ],
+  "contact": {
+    "homepage": "https://booger.gov",
+    "sources": "this mod is stolen"
+  },
+
+  "license": "MMPL-1.0 J",
+  "icon": "assets/omenamaitotee/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "mods.omenamaito.OmenaMaitoTee"
+    ],
+    "client": [
+      "mods.omenamaito.client.OmenaMaitoTeeClient"
+    ]
+  },
+  "mixins": [
+    "mixins.omenamaitotee.json"
+  ],
+  "requires": {
+    "fabricloader": ">=0.4.0",
+    "fabric": "*"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

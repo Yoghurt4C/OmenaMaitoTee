@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+	"particle": "omenamaitotee:block/flint_block",
+	"all": "omenamaitotee:block/flint_block"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "itemGroup.omenamaitotee.core_group": "Omena&Maito&Tee:Core",
+  "itemGroup.omenamaitotee.food_group": "Omena&Maito&Tee:Foods",
+
+  "item.omt.grater": "Grater",
+  "item.omt.chalcedony_knife": "Chalcedony Knife",
+  "item.omt.chalcedony_stone_cutter": "Chalcedony Stone Cutter",
+
+  "item.omt.toffy_apple":"Toffy Apple",
+  "item.omt.chilled_toffy_apple":"Chilled Toffy Apple",
+  "item.omt.ruffled_toffy_apple":"Ruffled Toffy Apple",
+  "item.omt.golden_toffy_apple":"Golden Toffy Apple",
+  "item.omt.green_toffy_apple":"Green Toffy Apple",
+
+  "block.omt.chalcedony": "Chalcedony",
+  "block.omt.orange_chalcedony": "Orange Chalcedony",
+  "block.omt.white_chalcedony": "White Chalcedony",
+  "block.omt.glowing_chalcedony": "Glowing Chalcedony",
+  "block.omt.glowing_orange_chalcedony": "Glowing Orange Chalcedony",
+  "block.omt.glowing_white_chalcedony": "Glowing White Chalcedony",
+  "block.omt.chalcedony_lamp": "Chalcedony Lamp",
+  "block.omt.orange_chalcedony_lamp": "Orange Chalcedony Lamp",
+  "block.omt.white_chalcedony_lamp": "White Chalcedony Lamp",
+  "block.omt.flint_block": "Flint Block"
+}

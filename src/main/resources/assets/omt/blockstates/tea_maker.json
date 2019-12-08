@@ -1,0 +1,8 @@
+{
+    "variants": {
+    	"facing=north": { "model": "omt:block/tea_maker" },
+    	"facing=south": { "model": "omt:block/tea_maker", "y": 180 },
+    	"facing=west":  { "model": "omt:block/tea_maker", "y": 270 },
+    	"facing=east":  { "model": "omt:block/tea_maker", "y": 90 }
+    }
+}

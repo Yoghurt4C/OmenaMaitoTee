@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+	"particle": "omenamaitotee:block/chalcedony",
+	"all": "omenamaitotee:block/chalcedony"
+  }
+}

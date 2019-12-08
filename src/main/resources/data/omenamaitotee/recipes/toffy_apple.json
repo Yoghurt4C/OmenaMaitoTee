@@ -1,0 +1,23 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+	{
+	  "item": "minecraft:sugar"
+	},
+	{
+	  "item": "minecraft:apple"
+	},
+	[
+		{
+	  "item": "minecraft:stick"
+		},
+		{
+	  "item": "minecraft:bamboo"
+		}
+	]
+  ],
+  "result": {
+	"item": "omt:toffy_apple",
+	"count": 1
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+	{
+	  "item": "omt:toffy_apple"
+	},
+	{
+	  "tag": "minecraft:leaves"
+	},
+	{
+	  "item": "minecraft:blaze_powder"
+	}
+  ],
+  "result": {
+	"item": "omt:green_toffy_apple",
+	"count": 1
+  }
+}

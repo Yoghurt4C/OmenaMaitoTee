@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+	{
+	  "item": "omt:grater"
+	},
+	{
+	  "item": "minecraft:cobblestone"
+	}
+  ],
+  "result": {
+	"item": "minecraft:sand",
+	"count": 1
+  }
+}
