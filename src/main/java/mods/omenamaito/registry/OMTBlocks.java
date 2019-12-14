@@ -1,14 +1,13 @@
 package mods.omenamaito.registry;
 
-import mods.omenamaito.blockentities.BETeaMaker;
 import mods.omenamaito.blocks.BlockChalcedony;
+import mods.omenamaito.blocks.BlockCup;
 import mods.omenamaito.blocks.BlockTeaMaker;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 
 import mods.omenamaito.OmenaMaitoTee;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.DyeColor;

@@ -21,5 +21,7 @@
   "block.omt.chalcedony_lamp": "Chalcedony Lamp",
   "block.omt.orange_chalcedony_lamp": "Orange Chalcedony Lamp",
   "block.omt.white_chalcedony_lamp": "White Chalcedony Lamp",
-  "block.omt.flint_block": "Flint Block"
+  "block.omt.flint_block": "Flint Block",
+
+  "effect.omt.immunization": "Immunization"
 }

@@ -5,7 +5,10 @@ plugins {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-archivesBaseName = "${modid}"
+mod_name = project.mod_name
+minecraft_version = project.minecraft_version
+
+archivesBaseName = "${mod_name}_${minecraft_version}"
 processResources {
 	inputs.property "version", project.version
 

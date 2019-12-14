@@ -1,10 +1,6 @@
 package mods.omenamaito.client.models;
 
 import com.google.common.collect.ImmutableList;
-import com.sun.jna.StringArray;
-import grondag.fermion.client.models.SimpleUnbakedModel;
-import it.unimi.dsi.fastutil.HashCommon;
-import mods.omenamaito.client.OmenaMaitoTeeClient;
 import net.fabricmc.fabric.api.renderer.v1.Renderer;
 import net.fabricmc.fabric.api.renderer.v1.RendererAccess;
 import net.fabricmc.fabric.api.renderer.v1.material.BlendMode;
@@ -17,12 +13,10 @@ import net.fabricmc.fabric.api.renderer.v1.model.ModelHelper;
 import net.fabricmc.fabric.api.renderer.v1.render.RenderContext;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.render.model.BakedModel;
-import net.minecraft.client.render.model.ModelBakeSettings;
-import net.minecraft.client.render.model.ModelLoader;
-import net.minecraft.client.render.model.json.ModelTransformation;
 import net.minecraft.client.texture.Sprite;
 import net.minecraft.client.texture.SpriteAtlasTexture;
 import net.minecraft.client.util.SpriteIdentifier;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import grondag.fermion.client.models.SimpleModel;
 
@@ -30,7 +24,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockRenderView;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Random;
 import java.util.function.Function;
@@ -39,11 +32,13 @@ import java.util.function.Supplier;
 public class TeaMakerModel extends SimpleModel{
     private final BakedModel TeaMakerJSONModel;
     public static final List<SpriteIdentifier> TEXTURES = ImmutableList.of(
-            new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEX, new Identifier("omenamaitotee:block/chalcedony")),
-            new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEX, new Identifier("omenamaitotee:block/orange_chalcedony"))
-    );
+            new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEX, new Identifier("minecraft:block/water_still")),
 
-    protected final Sprite fluidOverlay;
+            new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEX, new Identifier("minecraft:block/quartz_block_bottom")),
+            new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEX, new Identifier("omenamaitotee:block/summer_cup")),
+            new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEX, new Identifier("omenamaitotee:block/jp_cup"))
+            );
+
     protected final Sprite fluidBase;
     protected final Sprite[] fluidSprite=new Sprite[TEXTURES.size()];
     protected final Renderer renderer = RendererAccess.INSTANCE.getRenderer();
@@ -52,7 +47,6 @@ public class TeaMakerModel extends SimpleModel{
     public TeaMakerModel(Sprite sprite, Function<SpriteIdentifier, Sprite> spriteMap, BakedModel exteriorModel) {
         super(sprite, ModelHelper.MODEL_TRANSFORM_BLOCK);
         this.TeaMakerJSONModel=exteriorModel;
-        fluidOverlay = spriteMap.apply(new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEX, new Identifier("minecraft:block/water_overlay")));
         fluidBase = spriteMap.apply(new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEX, new Identifier("minecraft:block/water_still")));
         for (int i = 0; i < fluidSprite.length; i++) {
             fluidSprite[i] = spriteMap.apply(TEXTURES.get(i));
@@ -61,6 +55,13 @@ public class TeaMakerModel extends SimpleModel{
 
     @Override
     public final void emitBlockQuads(BlockRenderView blockView, BlockState state, BlockPos pos, Supplier<Random> randomSupplier, RenderContext context) {
+        final QuadEmitter qe = context.getEmitter();
+        context.fallbackConsumer().accept(TeaMakerJSONModel);
+        emitQuads(qe);
+    }
+
+    @Override
+    public void emitItemQuads(ItemStack stack, Supplier<Random> randomSupplier, RenderContext context) {
         final QuadEmitter qe = context.getEmitter();
         context.fallbackConsumer().accept(TeaMakerJSONModel);
         emitQuads(qe);
