@@ -23,5 +23,8 @@
   "block.omt.white_chalcedony_lamp": "White Chalcedony Lamp",
   "block.omt.flint_block": "Flint Block",
 
-  "effect.omt.immunization": "Immunization"
+  "effect.omt.immunization": "Immunization",
+
+  "tooltip.omt.clear_harmful_effects": "Clear negative potion effect.",
+  "tooltip.omt.prolong_effect": "Increase duration of current potion effect. (+5 min)"
 }

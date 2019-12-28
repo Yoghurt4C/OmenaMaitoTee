@@ -7,6 +7,7 @@ import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.EntityContext;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
@@ -47,7 +48,7 @@ public class BlockTeaMaker extends Block implements BlockEntityProvider {
 
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack stack = player.getStackInHand(hand);
-        if (stack.isEmpty()) {
+        /*if (stack.isEmpty()) {
             return ActionResult.PASS;
         } else {
             Item item = stack.getItem();
@@ -77,7 +78,7 @@ public class BlockTeaMaker extends Block implements BlockEntityProvider {
                     world.playSound((PlayerEntity) null, pos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
                 }
             }
-        }
+        }*/
         return ActionResult.SUCCESS;
     }
 

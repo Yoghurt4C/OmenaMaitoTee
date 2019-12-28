@@ -34,7 +34,7 @@ public class TeaMakerModel extends SimpleModel{
     public static final List<SpriteIdentifier> TEXTURES = ImmutableList.of(
             new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEX, new Identifier("minecraft:block/water_still")),
 
-            new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEX, new Identifier("minecraft:block/quartz_block_bottom")),
+            new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEX, new Identifier("minecraft:block/quartz_block_top")),
             new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEX, new Identifier("omenamaitotee:block/summer_cup")),
             new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEX, new Identifier("omenamaitotee:block/jp_cup"))
             );
@@ -84,7 +84,7 @@ public class TeaMakerModel extends SimpleModel{
 
     protected void emitFluidFace(QuadEmitter qe, Direction face) {
         qe.material(outerMaterial)
-                .square(face, 0.25f, 0.25f, 0.75f, 0.75f, 0.32f)
+                .square(face, 0.26f, 0.26f, 0.74f, 0.74f, 0.32f)
                 .spriteColor(0, -1, -1, -1, -1)
                 .spriteBake(0, fluidBase, MutableQuadView.BAKE_LOCK_UV)
                 .emit();
